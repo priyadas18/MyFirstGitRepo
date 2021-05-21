@@ -1,0 +1,32 @@
+package com.rest;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
+public class SimplePostTest {
+
+	@Test
+	public void registration() {
+		RestAssured.baseURI = "https://restapi.demoqa.com/customer";
+		RestAssured.useRelaxedHTTPSValidation();
+		RequestSpecification request = RestAssured.given();
+		JSONObject requestParams = new JSONObject();
+		requestParams.put("FirstName", "Virender");
+		requestParams.put("LastName", "Singh");
+		requestParams.put("UserName", "simpleuser001");
+		requestParams.put("Password", "password1");
+		requestParams.put("Email", "someuser@gmail.com");
+		request.header("Content-Type", "application/json");
+		JSONArray authArray = new JSONArray();
+		
+		request.body(requestParams.toString());
+		Response response = request.post("/register");
+		int
+	}
+
+}

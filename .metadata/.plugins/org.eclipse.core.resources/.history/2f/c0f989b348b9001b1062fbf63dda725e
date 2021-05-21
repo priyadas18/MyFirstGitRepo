@@ -1,0 +1,22 @@
+package com.rest;
+
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
+public class SimpleGetTest {
+	@Test
+	public void GetWeatherDetails() {
+		RestAssured.baseURI = "https://demoqa.com/utilities/weather/city";
+		RestAssured.useRelaxedHTTPSValidation();
+		RequestSpecification httpRequest = RestAssured.given();
+		Response response = httpRequest.get("/Hyderbad");
+		String responseBody = response.getBody().asString();
+		System.out.println("The Response is -->>"+responseBody);
+		
+
+	}
+
+}

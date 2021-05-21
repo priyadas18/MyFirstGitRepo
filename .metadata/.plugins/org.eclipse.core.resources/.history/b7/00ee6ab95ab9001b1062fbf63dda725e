@@ -1,0 +1,13 @@
+package com.rest;
+
+import org.testng.annotations.Test;
+
+public class SimplePostTest {
+	
+	@Test
+	public void registration()
+	{
+		
+	}
+
+}

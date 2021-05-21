@@ -1,0 +1,11 @@
+package com.rest;
+
+public class SimplePostTest {
+	
+	@Test
+	public void registration()
+	{
+		
+	}
+
+}

@@ -1,0 +1,18 @@
+package com.rest;
+
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.specification.RequestSpecification;
+
+public class SimplePostTest {
+	
+	@Test
+	public void registration()
+	{
+		RestAssured.baseURI = "";
+		RestAssured.useRelaxedHTTPSValidation();
+		RequestSpecification request = RestAssured.given();
+	}
+
+}

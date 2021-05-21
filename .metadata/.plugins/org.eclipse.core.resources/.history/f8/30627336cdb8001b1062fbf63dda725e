@@ -1,0 +1,8 @@
+package com;
+
+import io.restassured.RestAssured.*;
+
+public class TestAPI {
+	RestAssured 
+
+}
