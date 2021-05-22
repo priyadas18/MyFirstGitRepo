@@ -22,7 +22,6 @@ public class SimpleGetTest {
 		JsonPath jsoneval = response.jsonPath();
 		String temp = jsoneval.get("Temperature");
 		System.out.println(temp);
-		System.out.println(headerType);
 
 	}
 
